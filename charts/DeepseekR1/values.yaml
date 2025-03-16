@@ -11,18 +11,15 @@ ollama:
      gpu:
        enabled: true
        type: 'nvidia'
-       # we are going to be using MIG so this may be ignored
        number: 1
        nvidiaResource: nvidia.com/mig-1g.6gb
      models:
-       pull:
-         - deepseek-r1:7b
        run:
-         - deepseek-r1:7b
-   runtimeClassName: nvidia
-   persistentVolume:
-     enabled: true
-     size: 30Gi
+         - "deepseek-r1:7b"
+     runtimeClassName: nvidia
+     persistentVolume:
+       enabled: true
+       size: 30Gi
 
 pipelines:
   # -- Automatically install Pipelines chart to extend Open WebUI functionality using Pipelines: https://github.com/open-webui/pipelines
