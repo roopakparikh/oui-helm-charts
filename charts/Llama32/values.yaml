@@ -15,7 +15,7 @@ ollama:
        nvidiaResource: nvidia.com/mig-1g.6gb
      models:
        run:
-         - "llama2:latest"
+         - "llama3.2:3b"
      runtimeClassName: nvidia
      persistentVolume:
        enabled: true
