@@ -1,15 +1,16 @@
 apiVersion: v2
-name: open-webui
+name: DeepseekR1
 version: 5.24.0
 appVersion: 0.5.20
-home: https://www.openwebui.com/
+home: https://deepseek.ai/
 icon: >-
-  https://raw.githubusercontent.com/open-webui/open-webui/main/static/favicon.png
-description: 'Open WebUI: A User-Friendly Web Interface for Chat Interactions 👋'
+  https://raw.githubusercontent.com/deepseek-ai/DeepSeek-Coder/main/pictures/logo.png
+description: 'DeepSeek R1: A Helm Chart for Running DeepSeek R1 Model with Open WebUI'
 keywords:
   - llm
   - chat
-  - web-ui
+  - deepseek
+  - deepseek-r1
   - open-webui
 sources:
   - https://github.com/open-webui/helm-charts
