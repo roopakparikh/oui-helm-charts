@@ -1,5 +1,5 @@
-nameOverride: "Gemma3"
-namespaceOverride: "Gemma3"
+nameOverride: "gemma3"
+namespaceOverride: "gemma3"
 
 ollama:
   # -- Automatically install Ollama Helm chart from https://otwld.github.io/ollama-helm/. Use [Helm Values](https://github.com/otwld/ollama-helm/#helm-values) to configure

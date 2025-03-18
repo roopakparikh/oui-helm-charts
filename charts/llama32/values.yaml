@@ -1,5 +1,5 @@
-nameOverride: "Llama32"
-namespaceOverride: "Llama32"
+nameOverride: "llama32"
+namespaceOverride: "llama32"
 
 ollama:
   # -- Automatically install Ollama Helm chart from https://otwld.github.io/ollama-helm/. Use [Helm Values](https://github.com/otwld/ollama-helm/#helm-values) to configure

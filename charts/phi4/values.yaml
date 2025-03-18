@@ -1,5 +1,5 @@
-nameOverride: "Phi4"
-namespaceOverride: "Phi4"
+nameOverride: "phi4"
+namespaceOverride: "phi4"
 
 ollama:
   # -- Automatically install Ollama Helm chart from https://otwld.github.io/ollama-helm/. Use [Helm Values](https://github.com/otwld/ollama-helm/#helm-values) to configure
