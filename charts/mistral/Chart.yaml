@@ -1,16 +1,16 @@
 apiVersion: v2
-name: DeepseekR1
+name: mistral
 version: 5.24.0
 appVersion: 0.5.20
-home: https://deepseek.ai/
+home: https://mistral.ai/
 icon: >-
-  https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/deepseek-color.png
-description: 'DeepSeek R1: A Helm Chart for Running DeepSeek R1 Model with Open WebUI'
+  https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/mistral-color.png
+description: 'Mistral: A Helm Chart for Running Mistral AI Models with Open WebUI'
 keywords:
   - llm
   - chat
-  - deepseek
-  - deepseek-r1
+  - mistral
+  - mistral-ai
   - open-webui
 sources:
   - https://github.com/open-webui/helm-charts

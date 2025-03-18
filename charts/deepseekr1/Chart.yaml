@@ -1,17 +1,16 @@
 apiVersion: v2
-name: Llama32
+name: deepseekr1
 version: 5.24.0
 appVersion: 0.5.20
-home: https://ai.meta.com/llama/
+home: https://deepseek.ai/
 icon: >-
-  https://lightningaidev.wpengine.com/wp-content/uploads/2023/04/Untitled-4.png
-description: 'Llama 3.2: A Helm Chart for Running Llama 3.2 Model with Open WebUI'
+  https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/deepseek-color.png
+description: 'DeepSeek R1: A Helm Chart for Running DeepSeek R1 Model with Open WebUI'
 keywords:
   - llm
   - chat
-  - meta
-  - llama
-  - llama-3
+  - deepseek
+  - deepseek-r1
   - open-webui
 sources:
   - https://github.com/open-webui/helm-charts
