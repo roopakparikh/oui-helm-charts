@@ -12,7 +12,6 @@ ollama:
        enabled: true
        type: 'nvidia'
        number: 1
-       nvidiaResource: nvidia.com/mig-1g.6gb
      models:
        run:
          - "phi4-mini:3.8b"
