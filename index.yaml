@@ -5,7 +5,7 @@ entries:
       licenses: MIT
     apiVersion: v2
     appVersion: 0.5.20
-    created: "2025-03-18T16:50:12.063433-07:00"
+    created: "2025-03-18T17:17:48.786527-07:00"
     dependencies:
     - condition: ollama.enabled
       import-values:
@@ -32,7 +32,7 @@ entries:
       version: '>=20.6.2'
     description: 'DeepSeek R1: A Helm Chart for Running DeepSeek R1 Model with Open
       WebUI'
-    digest: b492792c7b5b0ef6c94510fad6be8df0b93ee0c200b5f34eb08879ca2382b626
+    digest: a5ddcc9b497eadc30b11b0d0a3b4e131b880171036a63c604146013407421ce8
     home: https://deepseek.ai/
     icon: https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/deepseek-color.png
     keywords:
@@ -56,7 +56,7 @@ entries:
       licenses: MIT
     apiVersion: v2
     appVersion: 0.5.20
-    created: "2025-03-18T16:50:12.072327-07:00"
+    created: "2025-03-18T17:17:48.794037-07:00"
     dependencies:
     - condition: ollama.enabled
       import-values:
@@ -82,7 +82,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: '>=20.6.2'
     description: 'Gemma: A Helm Chart for Running Google Gemma Model with Open WebUI'
-    digest: ca92c9db82a5af45cec3b7b37c027d3a10bd2f29dc0850ae84ea51ad9a0d8e26
+    digest: dbf17c7a50e563eec7f6e753f0619e021d4d5fb0866b21f6b5e0ef2a9d08c1f5
     home: https://blog.google/technology/ai/gemma-open-ai-model/
     icon: https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/gemma-color.png
     keywords:
@@ -106,7 +106,7 @@ entries:
       licenses: MIT
     apiVersion: v2
     appVersion: 0.5.20
-    created: "2025-03-18T16:50:12.080285-07:00"
+    created: "2025-03-18T17:17:48.801748-07:00"
     dependencies:
     - condition: ollama.enabled
       import-values:
@@ -132,7 +132,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: '>=20.6.2'
     description: 'Llama 3.2: A Helm Chart for Running Llama 3.2 Model with Open WebUI'
-    digest: e003f2ab61cab58d9421f331c735c30a8fafcd38237dbb2d430e54477effc833
+    digest: 3c280667d123e81a36238a3a590bb720804e05044753357c82f5b3a4b8192c68
     home: https://ai.meta.com/llama/
     icon: https://lightningaidev.wpengine.com/wp-content/uploads/2023/04/Untitled-4.png
     keywords:
@@ -157,7 +157,7 @@ entries:
       licenses: MIT
     apiVersion: v2
     appVersion: 0.5.20
-    created: "2025-03-18T16:50:12.088229-07:00"
+    created: "2025-03-18T17:17:48.809717-07:00"
     dependencies:
     - condition: ollama.enabled
       import-values:
@@ -183,7 +183,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: '>=20.6.2'
     description: 'Mistral: A Helm Chart for Running Mistral AI Models with Open WebUI'
-    digest: 0ca2a55139a9cdcdd7a668d136603f9fe9d46ad90f2bf1efb2446bbf14ceabb5
+    digest: 5cdcf1e6d75ab8f69ecb0ca2daa4e847bf413ac6769bdc55f539ef19f7c0fee3
     home: https://mistral.ai/
     icon: https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/mistral-color.png
     keywords:
@@ -207,7 +207,7 @@ entries:
       licenses: MIT
     apiVersion: v2
     appVersion: 0.5.20
-    created: "2025-03-18T16:50:12.096311-07:00"
+    created: "2025-03-18T17:17:48.817594-07:00"
     dependencies:
     - condition: ollama.enabled
       import-values:
@@ -234,7 +234,7 @@ entries:
       version: '>=20.6.2'
     description: 'Phi-4: A Helm Chart for Running Microsoft Phi-4 Model with Open
       WebUI'
-    digest: 1dc00a8d11c0b40844ceda7e5e2e0ad2d014b5b0f053451abc471ffef44387a5
+    digest: 867eaea4a3b882812956c4465252b2a5b6c3ef1913f5b9c25ca1aa480abf8bc9
     home: https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/
     icon: https://cdn-icons-png.flaticon.com/256/8646/8646647.png
     keywords:
@@ -259,9 +259,9 @@ entries:
       licenses: MIT
     apiVersion: v2
     appVersion: alpha
-    created: "2025-03-18T16:50:12.097226-07:00"
+    created: "2025-03-18T17:17:48.818486-07:00"
     description: 'Pipelines: UI-Agnostic OpenAI API Plugin Framework'
-    digest: 642484278ccf7a6a1cd6923ef33a224032512315ecb1e08728201efffb0300b5
+    digest: 1ff3a1878f91c33f24387c5f9a0c14097abc657d5277414b5ba6d8f947ebed5c
     home: https://github.com/open-webui/pipelines
     icon: https://github.com/open-webui/pipelines/raw/main/header.png
     keywords:
@@ -275,4 +275,4 @@ entries:
     urls:
     - https://roopakparikh.github.io/oui-helm-charts/pipelines-0.5.0.tgz
     version: 0.5.0
-generated: "2025-03-18T16:50:12.054061-07:00"
+generated: "2025-03-18T17:17:48.776622-07:00"
