@@ -174,7 +174,7 @@ managedCertificate:
     - chat.example.com # update to your real domain
 
 ingress:
-  enabled: false
+  enabled: true
   class: "nginx"
   # -- Use appropriate annotations for your Ingress controller, e.g., for NGINX:  
   annotations: {}
@@ -193,7 +193,7 @@ ingress:
   tls: false
   existingSecret: ""
 persistence:
-  enabled: true
+  enabled: false
   size: 2Gi
   # -- Use existingClaim if you want to re-use an existing Open WebUI PVC instead of creating a new one
   existingClaim: ""
