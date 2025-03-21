@@ -5,7 +5,7 @@ entries:
       licenses: MIT
     apiVersion: v2
     appVersion: 0.5.20
-    created: "2025-03-18T21:23:37.190116-07:00"
+    created: "2025-03-21T14:53:08.860919-07:00"
     dependencies:
     - condition: ollama.enabled
       import-values:
@@ -49,14 +49,14 @@ entries:
     - https://hub.docker.com/r/ollama/ollama
     - https://charts.bitnami.com/bitnami
     urls:
-    - https://roopakparikh.github.io/oui-helm-charts/deepseekr1-5.24.0.tgz
+    - deepseekr1-5.24.0.tgz
     version: 5.24.0
   gemma3:
   - annotations:
       licenses: MIT
     apiVersion: v2
     appVersion: 0.5.20
-    created: "2025-03-18T21:23:37.1986-07:00"
+    created: "2025-03-21T14:53:08.869533-07:00"
     dependencies:
     - condition: ollama.enabled
       import-values:
@@ -99,14 +99,63 @@ entries:
     - https://hub.docker.com/r/ollama/ollama
     - https://charts.bitnami.com/bitnami
     urls:
-    - https://roopakparikh.github.io/oui-helm-charts/gemma3-5.24.0.tgz
+    - gemma3-5.24.0.tgz
     version: 5.24.0
+  kserve:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: deprecated
+          description: This chart is no longer maintained and has been deprecated. Please consider using [Official KServe Helm Chart](https://kserve.github.io/website/latest/admin/serverless/serverless/#4-install-kserve) instead.
+      artifacthub.io/containsSecurityUpdates: "false"
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/community-charts/helm-charts
+        - name: Upstream Project
+          url: http://github.com/kserve/kserve
+        - name: Official KServe Helm Chart Documentation
+          url: https://kserve.github.io/website/latest/admin/serverless/serverless/#4-install-kserve
+        - name: Official KServe Helm Chart Repository
+          url: https://github.com/kserve/kserve/pkgs/container/charts%2Fkserve
+      artifacthub.io/maintainers: |
+        - name: burakince
+          email: burak.ince@linux.org.tr
+      artifacthub.io/operator: "false"
+      artifacthub.io/prerelease: "false"
+    apiVersion: v2
+    appVersion: v0.8.0
+    created: "2025-03-21T14:53:08.877044-07:00"
+    dependencies:
+    - alias: cert-manager
+      condition: cert-manager.enabled
+      name: cert-manager
+      repository: https://charts.jetstack.io
+      version: '>=1.5.0'
+    description: Helm chart for KServe Serverless Inferencing on Kubernetes
+    digest: 42bd17724721a290bdb8f91b650c41906d4d5fe6b7b149eec022dc7c4287ef58
+    home: https://kserve.github.io/website/
+    icon: https://raw.githubusercontent.com/kserve/artwork/main/icon/color/k-serve-icon-color.png
+    keywords:
+    - kserve
+    - modelmesh
+    maintainers:
+    - email: burak.ince@linux.org.tr
+      name: burakince
+      url: https://www.burakince.net
+    name: kserve
+    sources:
+    - http://github.com/kserve/kserve
+    - https://github.com/community-charts/helm-charts
+    type: application
+    urls:
+    - kserve-1.0.2.tgz
+    version: 1.0.2
   llama32:
   - annotations:
       licenses: MIT
     apiVersion: v2
     appVersion: 0.5.20
-    created: "2025-03-18T21:23:37.206187-07:00"
+    created: "2025-03-21T14:53:08.885445-07:00"
     dependencies:
     - condition: ollama.enabled
       import-values:
@@ -150,14 +199,14 @@ entries:
     - https://hub.docker.com/r/ollama/ollama
     - https://charts.bitnami.com/bitnami
     urls:
-    - https://roopakparikh.github.io/oui-helm-charts/llama32-5.24.0.tgz
+    - llama32-5.24.0.tgz
     version: 5.24.0
   mistral:
   - annotations:
       licenses: MIT
     apiVersion: v2
     appVersion: 0.5.20
-    created: "2025-03-18T21:23:37.21379-07:00"
+    created: "2025-03-21T14:53:08.894455-07:00"
     dependencies:
     - condition: ollama.enabled
       import-values:
@@ -200,14 +249,194 @@ entries:
     - https://hub.docker.com/r/ollama/ollama
     - https://charts.bitnami.com/bitnami
     urls:
-    - https://roopakparikh.github.io/oui-helm-charts/mistral-5.24.0.tgz
+    - mistral-5.24.0.tgz
     version: 5.24.0
+  mlflow:
+  - annotations:
+      artifacthub.io/changes: |
+        - Add autoscaling support
+      artifacthub.io/containsSecurityUpdates: "false"
+      artifacthub.io/images: |
+        - name: mlflow
+          image: burakince/mlflow:2.21.0
+      artifacthub.io/license: MIT
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/community-charts/helm-charts
+        - name: Upstream Project
+          url: https://github.com/burakince/mlflow
+      artifacthub.io/maintainers: |
+        - name: burakince
+          email: burak.ince@linux.org.tr
+      artifacthub.io/operator: "false"
+      artifacthub.io/prerelease: "false"
+      artifacthub.io/screenshots: |
+        - title: Quickstart UI screenshot
+          url: https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/docs/static/images/quickstart/quickstart_ui_screenshot.png
+        - title: OSS registry 1 register
+          url: https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/docs/static/images/oss_registry_1_register.png
+        - title: OSS Registry 2 dialog
+          url: https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/docs/static/images/oss_registry_2_dialog.png
+        - title: OSS Registry 3 overview
+          url: https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/docs/static/images/oss_registry_3_overview.png
+        - title: OSS Registry 3b version
+          url: https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/docs/static/images/oss_registry_3b_version.png
+        - title: OSS Registry 4 version
+          url: https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/docs/static/images/oss_registry_4_model.png
+        - title: OSS Registry 4b version
+          url: https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/docs/static/images/oss_registry_4b_model_alias.png
+        - title: OSS Registry 5 transition
+          url: https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/docs/static/images/oss_registry_5_version.png
+        - title: OSS Registry 6 transition
+          url: https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/docs/static/images/oss_registry_6_version.png
+        - title: Experiment compare
+          url: https://raw.githubusercontent.com/mlflow/mlflow/refs/heads/master/docs/static/images/tutorial-compare.png
+      artifacthub.io/signKey: |
+        fingerprint: 939B1A0ED8AAA8E722ACCDB3B6A012EE8A76426A
+        url: https://keybase.io/communitycharts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 2.21.0
+    created: "2025-03-21T14:53:08.896652-07:00"
+    description: A Helm chart for Mlflow open source platform for the machine learning
+      lifecycle
+    digest: bba8a209b5762518dd06342005e8b6fcf4273cb57b1face6850ae5378efddc24
+    home: https://mlflow.org
+    icon: https://raw.githubusercontent.com/mlflow/mlflow/master/assets/logo.svg
+    keywords:
+    - docker
+    - machine-learning
+    - ai
+    - ml
+    - model-management
+    - mlflow
+    - mlflow-tracking-server
+    - mlflow-docker
+    - mlflow-tracking
+    - mlflow-kube
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: burak.ince@linux.org.tr
+      name: burakince
+      url: https://www.burakince.com
+    name: mlflow
+    sources:
+    - https://github.com/community-charts/helm-charts
+    - https://github.com/burakince/mlflow
+    - https://github.com/mlflow/mlflow
+    type: application
+    urls:
+    - mlflow-0.15.0.tgz
+    version: 0.15.0
+  n8n:
+  - annotations:
+      artifacthub.io/changes: |
+        - Add flag to enable/disable PodDisruptionBudget and support for n8n metrics with ServiceMonitor and PodMonitor
+      artifacthub.io/containsSecurityUpdates: "false"
+      artifacthub.io/images: |
+        - name: n8n
+          image: n8nio/n8n:1.83.2
+          platforms:
+            - linux/amd64
+            - linux/arm64
+      artifacthub.io/license: Apache-2.0
+      artifacthub.io/links: |
+        - name: Chart Source
+          url: https://github.com/community-charts/helm-charts
+        - name: Upstream Project
+          url: https://github.com/n8n-io/n8n
+        - name: Official Documentation
+          url: https://docs.n8n.io/
+      artifacthub.io/maintainers: |
+        - name: burakince
+          email: burak.ince@linux.org.tr
+      artifacthub.io/operator: "false"
+      artifacthub.io/prerelease: "false"
+      artifacthub.io/screenshots: |
+        - title: Editor UI Walkthrough
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-one/chapter-one/editor-ui-walkthrough.gif
+        - title: Node Menu Drilldown
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-one/chapter-one/l1-c1-node-menu-drilldown.gif
+        - title: Adding a Node
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-one/chapter-one/l1-c1-add-node-click.gif
+        - title: Node Buttons
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-one/chapter-one/node-buttons.gif
+        - title: Nathans Workflow
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-one/chapter-four/l1-c4-nathans-workflow.png
+        - title: Set Node
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-one/chapter-five/l1-c5-4-set-node.png
+        - title: Workflow with Set Node
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-one/chapter-five/l1-c5-4-workflow-with-set-node.png
+        - title: Code Node
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-one/chapter-five/l1-c5-5-5-code-node.png
+        - title: Discord Output
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-one/chapter-five/l1-c5-5-6-discord-output.png
+        - title: Exercise Function
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-two/chapter-one/exercise_function.png
+        - title: Exercise Function Not Nested
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-two/chapter-one/exercise_function_notnested.png
+        - title: Exercise Function Reference
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-two/chapter-one/exercise_function_reference.png
+        - title: HTTP Request Node
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-two/chapter-two/exercise_html_httprequestnode.png
+        - title: HTTP Extraction Node
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-two/chapter-two/exercise_html_htmlextractnode.png
+        - title: Binary Data HTTP Request Node
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-two/chapter-two/exercise_binarydata_httprequest_file.png
+        - title: Binary to JSON Node
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-two/chapter-two/exercise_binarydata_movedata_btoj.png
+        - title: JSON to XML Node
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-two/chapter-two/exercise_html_xmlnode_table.png
+        - title: Workflow
+          url: https://raw.githubusercontent.com/n8n-io/n8n-docs/refs/heads/main/docs/_images/courses/level-two/chapter-five/workflow2.png
+      artifacthub.io/signKey: |
+        fingerprint: 939B1A0ED8AAA8E722ACCDB3B6A012EE8A76426A
+        url: https://keybase.io/communitycharts/pgp_keys.asc
+    apiVersion: v2
+    appVersion: 1.83.2
+    created: "2025-03-21T14:53:08.907373-07:00"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.11.3
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.5.2
+    description: A Helm chart for fair-code workflow automation platform with native
+      AI capabilities. Combine visual building with custom code, self-host or cloud,
+      400+ integrations.
+    digest: 993552e19a33f7a822ab20031aa585d1ab0ac9684a52b7f14b9ab9ae69d4395d
+    home: https://n8n.io
+    icon: https://avatars1.githubusercontent.com/u/45487711?s=200&v=4
+    keywords:
+    - n8n
+    - Workflow Automation
+    - Workflow
+    - Automation
+    - iPaaS
+    - integration-framework
+    - low-code-plattform
+    - low-code
+    kubeVersion: '>=1.23.0-0'
+    maintainers:
+    - email: burak.ince@linux.org.tr
+      name: burakince
+      url: https://www.burakince.com
+    name: n8n
+    sources:
+    - https://github.com/community-charts/helm-charts
+    - https://github.com/n8n-io/n8n
+    type: application
+    urls:
+    - n8n-1.4.0.tgz
+    version: 1.4.0
   phi4:
   - annotations:
       licenses: MIT
     apiVersion: v2
     appVersion: 0.5.20
-    created: "2025-03-18T21:23:37.221437-07:00"
+    created: "2025-03-21T14:53:08.918399-07:00"
     dependencies:
     - condition: ollama.enabled
       import-values:
@@ -252,14 +481,14 @@ entries:
     - https://hub.docker.com/r/ollama/ollama
     - https://charts.bitnami.com/bitnami
     urls:
-    - https://roopakparikh.github.io/oui-helm-charts/phi4-5.24.0.tgz
+    - phi4-5.24.0.tgz
     version: 5.24.0
   pipelines:
   - annotations:
       licenses: MIT
     apiVersion: v2
     appVersion: alpha
-    created: "2025-03-18T21:23:37.222339-07:00"
+    created: "2025-03-21T14:53:08.920051-07:00"
     description: 'Pipelines: UI-Agnostic OpenAI API Plugin Framework'
     digest: c42b9b1842519ae173dc4b8eb679c4ae04538b247d9f2cbf8dc8062c6c42ea13
     home: https://github.com/open-webui/pipelines
@@ -273,6 +502,6 @@ entries:
     - https://github.com/open-webui/helm-charts
     - https://github.com/open-webui/pipelines/pkgs/container/pipelines
     urls:
-    - https://roopakparikh.github.io/oui-helm-charts/pipelines-0.5.0.tgz
+    - pipelines-0.5.0.tgz
     version: 0.5.0
-generated: "2025-03-18T21:23:37.182282-07:00"
+generated: "2025-03-21T14:53:08.852232-07:00"
