@@ -1,106 +1,5 @@
 apiVersion: v1
 entries:
-  deepseekr1:
-  - annotations:
-      licenses: MIT
-    apiVersion: v2
-    appVersion: 0.5.20
-    created: "2025-03-21T14:53:08.860919-07:00"
-    dependencies:
-    - condition: ollama.enabled
-      import-values:
-      - child: service
-        parent: ollama.service
-      name: ollama
-      repository: https://otwld.github.io/ollama-helm/
-      version: '>=0.24.0'
-    - condition: pipelines.enabled
-      import-values:
-      - child: service
-        parent: pipelines.service
-      name: pipelines
-      repository: https://helm.openwebui.com
-      version: '>=0.0.1'
-    - condition: tika.enabled
-      name: tika
-      repository: https://apache.jfrog.io/artifactory/tika
-      version: '>=2.9.0'
-    - alias: redis-cluster
-      condition: redis-cluster.enabled
-      name: redis
-      repository: https://charts.bitnami.com/bitnami
-      version: '>=20.6.2'
-    description: 'DeepSeek R1: A Helm Chart for Running DeepSeek R1 Model with Open
-      WebUI'
-    digest: 3afb1bbd6c7ac1d864880dedf4a04bace3d11ef13c9138b69dd9d966f99f311f
-    home: https://deepseek.ai/
-    icon: https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/deepseek-color.png
-    keywords:
-    - llm
-    - chat
-    - deepseek
-    - deepseek-r1
-    - open-webui
-    name: deepseekr1
-    sources:
-    - https://github.com/open-webui/helm-charts
-    - https://github.com/open-webui/open-webui/pkgs/container/open-webui
-    - https://github.com/otwld/ollama-helm/
-    - https://hub.docker.com/r/ollama/ollama
-    - https://charts.bitnami.com/bitnami
-    urls:
-    - deepseekr1-5.24.0.tgz
-    version: 5.24.0
-  gemma3:
-  - annotations:
-      licenses: MIT
-    apiVersion: v2
-    appVersion: 0.5.20
-    created: "2025-03-21T14:53:08.869533-07:00"
-    dependencies:
-    - condition: ollama.enabled
-      import-values:
-      - child: service
-        parent: ollama.service
-      name: ollama
-      repository: https://otwld.github.io/ollama-helm/
-      version: '>=0.24.0'
-    - condition: pipelines.enabled
-      import-values:
-      - child: service
-        parent: pipelines.service
-      name: pipelines
-      repository: https://helm.openwebui.com
-      version: '>=0.0.1'
-    - condition: tika.enabled
-      name: tika
-      repository: https://apache.jfrog.io/artifactory/tika
-      version: '>=2.9.0'
-    - alias: redis-cluster
-      condition: redis-cluster.enabled
-      name: redis
-      repository: https://charts.bitnami.com/bitnami
-      version: '>=20.6.2'
-    description: 'Gemma: A Helm Chart for Running Google Gemma Model with Open WebUI'
-    digest: 2d353b88094a8ea2f95da45b9143beefb756e5b3faa2e7bd2c4f8582707af1f0
-    home: https://blog.google/technology/ai/gemma-open-ai-model/
-    icon: https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/gemma-color.png
-    keywords:
-    - llm
-    - chat
-    - google
-    - gemma
-    - open-webui
-    name: gemma3
-    sources:
-    - https://github.com/open-webui/helm-charts
-    - https://github.com/open-webui/open-webui/pkgs/container/open-webui
-    - https://github.com/otwld/ollama-helm/
-    - https://hub.docker.com/r/ollama/ollama
-    - https://charts.bitnami.com/bitnami
-    urls:
-    - gemma3-5.24.0.tgz
-    version: 5.24.0
   kserve:
   - annotations:
       artifacthub.io/changes: |
@@ -124,7 +23,7 @@ entries:
       artifacthub.io/prerelease: "false"
     apiVersion: v2
     appVersion: v0.8.0
-    created: "2025-03-21T14:53:08.877044-07:00"
+    created: "2025-03-23T11:03:37.072171-07:00"
     dependencies:
     - alias: cert-manager
       condition: cert-manager.enabled
@@ -132,7 +31,7 @@ entries:
       repository: https://charts.jetstack.io
       version: '>=1.5.0'
     description: Helm chart for KServe Serverless Inferencing on Kubernetes
-    digest: 42bd17724721a290bdb8f91b650c41906d4d5fe6b7b149eec022dc7c4287ef58
+    digest: b11404df5879fd36e26192dc1926676c5c1b73e8d166e28b4a8de885c75f7b7f
     home: https://kserve.github.io/website/
     icon: https://raw.githubusercontent.com/kserve/artwork/main/icon/color/k-serve-icon-color.png
     keywords:
@@ -150,107 +49,6 @@ entries:
     urls:
     - kserve-1.0.2.tgz
     version: 1.0.2
-  llama32:
-  - annotations:
-      licenses: MIT
-    apiVersion: v2
-    appVersion: 0.5.20
-    created: "2025-03-21T14:53:08.885445-07:00"
-    dependencies:
-    - condition: ollama.enabled
-      import-values:
-      - child: service
-        parent: ollama.service
-      name: ollama
-      repository: https://otwld.github.io/ollama-helm/
-      version: '>=0.24.0'
-    - condition: pipelines.enabled
-      import-values:
-      - child: service
-        parent: pipelines.service
-      name: pipelines
-      repository: https://helm.openwebui.com
-      version: '>=0.0.1'
-    - condition: tika.enabled
-      name: tika
-      repository: https://apache.jfrog.io/artifactory/tika
-      version: '>=2.9.0'
-    - alias: redis-cluster
-      condition: redis-cluster.enabled
-      name: redis
-      repository: https://charts.bitnami.com/bitnami
-      version: '>=20.6.2'
-    description: 'Llama 3.2: A Helm Chart for Running Llama 3.2 Model with Open WebUI'
-    digest: 79e942e4d9fd8f6fa90054a7caa0731180d02b8fccd8e7a5d65850f5ec5afb7b
-    home: https://ai.meta.com/llama/
-    icon: https://lightningaidev.wpengine.com/wp-content/uploads/2023/04/Untitled-4.png
-    keywords:
-    - llm
-    - chat
-    - meta
-    - llama
-    - llama-3
-    - open-webui
-    name: llama32
-    sources:
-    - https://github.com/open-webui/helm-charts
-    - https://github.com/open-webui/open-webui/pkgs/container/open-webui
-    - https://github.com/otwld/ollama-helm/
-    - https://hub.docker.com/r/ollama/ollama
-    - https://charts.bitnami.com/bitnami
-    urls:
-    - llama32-5.24.0.tgz
-    version: 5.24.0
-  mistral:
-  - annotations:
-      licenses: MIT
-    apiVersion: v2
-    appVersion: 0.5.20
-    created: "2025-03-21T14:53:08.894455-07:00"
-    dependencies:
-    - condition: ollama.enabled
-      import-values:
-      - child: service
-        parent: ollama.service
-      name: ollama
-      repository: https://otwld.github.io/ollama-helm/
-      version: '>=0.24.0'
-    - condition: pipelines.enabled
-      import-values:
-      - child: service
-        parent: pipelines.service
-      name: pipelines
-      repository: https://helm.openwebui.com
-      version: '>=0.0.1'
-    - condition: tika.enabled
-      name: tika
-      repository: https://apache.jfrog.io/artifactory/tika
-      version: '>=2.9.0'
-    - alias: redis-cluster
-      condition: redis-cluster.enabled
-      name: redis
-      repository: https://charts.bitnami.com/bitnami
-      version: '>=20.6.2'
-    description: 'Mistral: A Helm Chart for Running Mistral AI Models with Open WebUI'
-    digest: ebe42eeaa6337f590f5c06fc3d2e39b8ea6db367906de3aae93c9506081a3218
-    home: https://mistral.ai/
-    icon: https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/mistral-color.png
-    keywords:
-    - llm
-    - chat
-    - mistral
-    - mistral-ai
-    - open-webui
-    name: mistral
-    sources:
-    - https://github.com/open-webui/helm-charts
-    - https://github.com/open-webui/open-webui/pkgs/container/open-webui
-    - https://github.com/otwld/ollama-helm/
-    - https://hub.docker.com/r/ollama/ollama
-    - https://charts.bitnami.com/bitnami
-    urls:
-    - mistral-5.24.0.tgz
-    version: 5.24.0
   mlflow:
   - annotations:
       artifacthub.io/changes: |
@@ -296,10 +94,10 @@ entries:
         url: https://keybase.io/communitycharts/pgp_keys.asc
     apiVersion: v2
     appVersion: 2.21.0
-    created: "2025-03-21T14:53:08.896652-07:00"
+    created: "2025-03-23T11:03:37.0754-07:00"
     description: A Helm chart for Mlflow open source platform for the machine learning
       lifecycle
-    digest: bba8a209b5762518dd06342005e8b6fcf4273cb57b1face6850ae5378efddc24
+    digest: aeebba44f41daf50fbec783f1f27c861b35de70b2c32760d3e727bd8a5803cd5
     home: https://mlflow.org
     icon: https://raw.githubusercontent.com/mlflow/mlflow/master/assets/logo.svg
     keywords:
@@ -393,7 +191,7 @@ entries:
         url: https://keybase.io/communitycharts/pgp_keys.asc
     apiVersion: v2
     appVersion: 1.83.2
-    created: "2025-03-21T14:53:08.907373-07:00"
+    created: "2025-03-23T11:03:37.086401-07:00"
     dependencies:
     - condition: redis.enabled
       name: redis
@@ -406,7 +204,7 @@ entries:
     description: A Helm chart for fair-code workflow automation platform with native
       AI capabilities. Combine visual building with custom code, self-host or cloud,
       400+ integrations.
-    digest: 993552e19a33f7a822ab20031aa585d1ab0ac9684a52b7f14b9ab9ae69d4395d
+    digest: 39960adb8594b842ae9900d32fa300f426b0adbdbdfaa33a05b4ea2e7e09ee3d
     home: https://n8n.io
     icon: https://avatars1.githubusercontent.com/u/45487711?s=200&v=4
     keywords:
@@ -431,66 +229,14 @@ entries:
     urls:
     - n8n-1.4.0.tgz
     version: 1.4.0
-  phi4:
-  - annotations:
-      licenses: MIT
-    apiVersion: v2
-    appVersion: 0.5.20
-    created: "2025-03-21T14:53:08.918399-07:00"
-    dependencies:
-    - condition: ollama.enabled
-      import-values:
-      - child: service
-        parent: ollama.service
-      name: ollama
-      repository: https://otwld.github.io/ollama-helm/
-      version: '>=0.24.0'
-    - condition: pipelines.enabled
-      import-values:
-      - child: service
-        parent: pipelines.service
-      name: pipelines
-      repository: https://helm.openwebui.com
-      version: '>=0.0.1'
-    - condition: tika.enabled
-      name: tika
-      repository: https://apache.jfrog.io/artifactory/tika
-      version: '>=2.9.0'
-    - alias: redis-cluster
-      condition: redis-cluster.enabled
-      name: redis
-      repository: https://charts.bitnami.com/bitnami
-      version: '>=20.6.2'
-    description: 'Phi-4: A Helm Chart for Running Microsoft Phi-4 Model with Open
-      WebUI'
-    digest: a22ecf2e90589c8588121283c86f416f7bf21dbd8e6b75091a52d52d2acdf7a9
-    home: https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/
-    icon: https://cdn-icons-png.flaticon.com/256/8646/8646647.png
-    keywords:
-    - llm
-    - chat
-    - microsoft
-    - phi
-    - phi-4
-    - open-webui
-    name: phi4
-    sources:
-    - https://github.com/open-webui/helm-charts
-    - https://github.com/open-webui/open-webui/pkgs/container/open-webui
-    - https://github.com/otwld/ollama-helm/
-    - https://hub.docker.com/r/ollama/ollama
-    - https://charts.bitnami.com/bitnami
-    urls:
-    - phi4-5.24.0.tgz
-    version: 5.24.0
   pipelines:
   - annotations:
       licenses: MIT
     apiVersion: v2
     appVersion: alpha
-    created: "2025-03-21T14:53:08.920051-07:00"
+    created: "2025-03-23T11:03:37.087875-07:00"
     description: 'Pipelines: UI-Agnostic OpenAI API Plugin Framework'
-    digest: c42b9b1842519ae173dc4b8eb679c4ae04538b247d9f2cbf8dc8062c6c42ea13
+    digest: 886e194b3f85a40922cac849344ad4b616fbcbacbd9a6a1b4f56c74d9fa1e74f
     home: https://github.com/open-webui/pipelines
     icon: https://github.com/open-webui/pipelines/raw/main/header.png
     keywords:
@@ -504,4 +250,4 @@ entries:
     urls:
     - pipelines-0.5.0.tgz
     version: 0.5.0
-generated: "2025-03-21T14:53:08.852232-07:00"
+generated: "2025-03-23T11:03:37.063796-07:00"
